@@ -94,7 +94,7 @@ all_players = sorted(df["Name"].unique())
 input_method = st.sidebar.radio("選擇姓名輸入方式：", ["從下拉選單選取", "自行輸入名字"])
 
 if input_method == "從下拉選單選取":
-    default_index = all_players.index("Mike Trout") if "Mike Trout" in all_players else 0
+    default_index = all_players.index("Shohei Ohtani") if "Shohei Ohtani" in all_players else 0
     player_input = st.sidebar.selectbox("選擇打者姓名：", all_players, index=default_index)
 else:
     player_input = st.sidebar.text_input("輸入打者姓名（可輸入關鍵字，如 Trout）：", value="Mike Trout")
