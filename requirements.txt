@@ -6,3 +6,4 @@ pybaseball>=2.2
 scipy>=1.8,<1.12
 pyarrow>=10,<16
 plotly>=5.18,<7
+python>=3.11,<3.12
