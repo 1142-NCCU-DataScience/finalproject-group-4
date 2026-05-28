@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.graph_objects as go
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import pairwise_distances
 
@@ -85,6 +86,48 @@ def find_replacement_batters(df, target_name, target_year, top_n=10):
     
     return candidate_pool.sort_values("distance")[available_cols].head(top_n), None
 
+def build_radar_figure(df, target_row, radar_features):
+    year_df = df[df["Year"] == target_row["Year"]].copy()
+    year_stats = year_df[radar_features].replace([np.inf, -np.inf], np.nan)
+    year_stats = year_stats.fillna(year_stats.median(numeric_only=True))
+
+    percentile_df = year_stats.rank(pct=True) * 100
+    target_mask = year_df.index == target_row.name
+    cluster_mask = year_df["cluster"] == target_row["cluster"]
+
+    target_values = percentile_df[target_mask].iloc[0].tolist()
+    cluster_avg_values = percentile_df[cluster_mask].mean().tolist()
+
+    theta = radar_features + [radar_features[0]]
+    target_values_closed = target_values + [target_values[0]]
+    cluster_avg_closed = cluster_avg_values + [cluster_avg_values[0]]
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=target_values_closed,
+        theta=theta,
+        fill="toself",
+        name=f"{target_row['Name']}（百分位）",
+        line=dict(color="#1f77b4")
+    ))
+    fig.add_trace(go.Scatterpolar(
+        r=cluster_avg_closed,
+        theta=theta,
+        fill="toself",
+        name="同分群平均（百分位）",
+        line=dict(color="#ff7f0e")
+    ))
+
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 100])
+        ),
+        title="打者打擊指標雷達圖（同年度百分位）",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        margin=dict(l=30, r=30, t=70, b=30)
+    )
+    return fig
+
 # ==========================================
 # 2. 側邊欄：使用者輸入介面
 # ==========================================
@@ -150,10 +193,33 @@ if player_input:
     ]
     
     if len(player_year_data) > 0:
-        p_name = player_year_data["Name"].iloc[0]
-        p_type = player_year_data["type"].iloc[0]
+        player_row = player_year_data.iloc[0]
+        p_name = player_row["Name"]
+        p_type = player_row["type"]
         
         st.info(f"💡 基準打者：**{p_name}** ({target_year}年) | 打擊型態：**{p_type}**")
+
+        radar_features = ["AVG", "OBP", "SLG", "OPS", "ISO", "BB%", "K%", "wOBA", "wRC+"]
+        available_radar_features = [col for col in radar_features if col in df.columns]
+        if available_radar_features:
+            st.subheader("📈 打者數據雷達圖")
+            radar_fig = build_radar_figure(df, player_row, available_radar_features)
+            st.plotly_chart(radar_fig, use_container_width=True)
+
+            with st.expander("📘 數據欄位解釋（點擊展開）", expanded=False):
+                st.markdown("""
+                - **AVG（打擊率）**：安打數 / 打數，衡量打者把球打成安打的能力。  
+                - **OBP（上壘率）**：包含安打、保送、觸身球等方式上壘的比例。  
+                - **SLG（長打率）**：以壘打數衡量打擊破壞力，長打越多通常越高。  
+                - **OPS**：`OBP + SLG`，常用的整體打擊貢獻指標。  
+                - **ISO（純長打率）**：`SLG - AVG`，反映額外壘打能力。  
+                - **BB%（保送率）**：打席中選到保送的比例，代表選球與上壘紀律。  
+                - **K%（三振率）**：打席中被三振的比例（通常越低越好）。  
+                - **wOBA（加權上壘率）**：對不同上壘事件給不同權重，較完整衡量進攻價值。  
+                - **wRC+（標準化得分創造）**：以聯盟平均 100 為基準，`120` 約代表高於聯盟平均 20%。  
+
+                雷達圖使用的是**同年度百分位**（0-100），可直接比較不同尺度指標。
+                """)
         
         recommend_df, error_msg = find_replacement_batters(df, p_name, target_year, top_n=10)
         

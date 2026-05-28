@@ -1,7 +1,8 @@
-streamlit==1.57.0
-pandas==3.0.3
-numpy==2.4.6
-scikit-learn==1.8.0
-pybaseball==2.2.7
-scipy==1.17.1
-pyarrow==24.0.0
+streamlit>=1.28,<1.51
+pandas>=1.5,<3
+numpy>=1.23,<2
+scikit-learn>=1.1,<1.5
+pybaseball>=2.2
+scipy>=1.8,<1.12
+pyarrow>=10,<16
+plotly>=5.18,<7
