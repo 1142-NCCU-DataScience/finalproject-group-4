@@ -11,7 +11,7 @@
 
 | 組員 | 系級 | 學號 | 工作分配 |
 |------|------|------|----------|
-| 吳帛恩 | 統計三 | 112207433 | Statcast 資料管線、EDA、K-Means 分群、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
+| 吳帛恩 | 統計三 | 112207433 | Statcast 資料pipeline、EDA、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
 | （待補） | — | — | — |
 
 ---
