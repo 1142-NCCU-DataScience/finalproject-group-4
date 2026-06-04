@@ -5,7 +5,7 @@ The goals of this project.
 ## Contributors
 |組員|系級|學號|工作分配|
 |-|-|-|-|
-|何大南|資科碩二|xxxxxxxxx|團隊中的吉祥物🦒，負責增進團隊氣氛| 
+|吳帛恩|統計三|112207433|打者生涯預測分析、Statcast資料搜集和清洗、根據逐球事件特徵建立Random forest模型預測wRC+| 
 |張小明|資科碩二|xxxxxxxxx|團隊的中流砥柱，一個人打十個|
 
 ## Quick start
