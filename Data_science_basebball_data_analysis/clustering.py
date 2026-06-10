@@ -347,5 +347,3 @@ find_replacement_batters(
     top_n=10,
     same_cluster=True
 )
-
-"""**跑出網頁**"""
