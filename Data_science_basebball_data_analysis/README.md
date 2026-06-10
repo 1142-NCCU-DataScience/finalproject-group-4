@@ -65,7 +65,7 @@ streamlit run app.py   →  網頁查詢介面
 
 ```bash
 # 克隆專案
-git clone https://github.com/<your-username>/Data_science_basebball_data_analysis.git
+git clone https://github.com/1142-NCCU-DataScience/finalproject-group-4.git
 cd Data_science_basebball_data_analysis
 
 # 建立並啟用虛擬環境
@@ -106,6 +106,8 @@ python clustering.py
 ```bash
 streamlit run app.py
 ```
+於瀏覽器貼上此網址亦可開啟網頁
+https://datasciencebasebballdataanalysis-wywvlrnqe73p8mvopkqcul.streamlit.app
 
 瀏覽器會自動開啟本地頁面（預設 `http://localhost:8501`）。
 
