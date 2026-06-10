@@ -106,11 +106,12 @@ python clustering.py
 ```bash
 streamlit run app.py
 ```
+
+瀏覽器會自動開啟本地頁面（預設 `http://localhost:8501`）。
+
 於瀏覽器貼上此網址亦可開啟網頁
 
 https://datasciencebasebballdataanalysis-wywvlrnqe73p8mvopkqcul.streamlit.app
-
-瀏覽器會自動開啟本地頁面（預設 `http://localhost:8501`）。
 
 ## 分群特徵
 
