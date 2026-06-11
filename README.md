@@ -111,8 +111,8 @@ finalproject-group-4/
 
 | 組員 | 系級 | 學號 | 工作分配 |
 |------|------|------|----------|
-| — | — | — | — |
-| — | — | — | — |
+| 何嘉柚 | 資訊四 | 111703010 | XGBoost模型訓練、簡報製作、README撰寫 |
+| 莊鈞程 | 資訊四 | 111703058 | Null models, RandomForest 模型訓、資料清洗、主題發想 |
 
 ### Batter_type_clustering
 
