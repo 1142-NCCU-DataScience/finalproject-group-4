@@ -102,18 +102,22 @@
 
 ## 5. 產出圖表解讀
 
-### 5.1 `../code/figures/projection_rf_perm_importance.png`
+### 5.1 `results/figures/projection_rf_perm_importance.png`
+
+![RF Permutation Importance](results/figures/projection_rf_perm_importance.png)
 
 - **內容：** Random Forest 在 **validation（target_season = 2023）** 上之 **permutation importance**（通常顯示前若干名特徵）。
 - **解讀：** 橫條越長 → 打亂該特徵後誤差上升越多 → 模型越依賴該輸入。常見重要項含 **K%、BABIP、PA、年齡** 等。若 **`primary_pos`** 多為 **UNK**，位置 one-hot 貢獻可能偏低。
 - **注意：** 為相對重要性，不代表與 wRC+ 之單調因果關係。
 
-### 5.2 `../code/figures/projection_rf_actual_vs_pred_2024.png`
+### 5.2 `results/figures/projection_rf_actual_vs_pred_2024.png`
+
+![RF 實際 vs 預測 2024](results/figures/projection_rf_actual_vs_pred_2024.png)
 
 - **內容：** **Test**（**target_season = 2024**）：橫軸 **實際 wRC+**，縱軸 **預測 wRC+**；對角線為完美預測。
 - **解讀：** 點愈靠近對角線愈準；整體偏移表示系統性高估或低估。若圖上標註 **MAE**，為 2024 測試集之平均絕對誤差。
 
-### 5.3 其他圖（`../code/figures/fig3`–`fig10` 等）
+### 5.3 其他圖（`results/figures/fig3`–`fig10` 等）
 
 多數來自**輔助 EDA／視覺化**或**舊版「同年指標 → wRC+」**任務，與「**隔年 wRC+ + 三年 lag**」主線**問題定義不同**。撰寫報告時建議以 **§4–§5.2** 與 **Task 7** 為主分析；若引用 fig3–fig10，請註明為補充圖或舊任務，避免與隔年預測混淆。
 
@@ -335,13 +339,14 @@ for test_year in seasons[1:]:           # 2022, 2023, 2024
 | `data/processed/all_models_comparison.csv` | 五模型整體 MAE / R² 匯整 |
 | `data/processed/rf_3yr_overall_metrics.csv` | RF 3yr 整體指標 |
 | `data/processed/rf_3yr_tier_metrics.csv` | RF 3yr 分層指標 |
-| `../code/figures/model_ours/train_year_comparison.png` | 訓練年數比較圖 |
-| `../code/figures/model_ours/eval_en3yr_coef.png` | ElasticNet 係數圖 |
-| `../code/figures/model_ours/eval_en3yr_error_by_tier.png` | 分層誤差圖 |
-| `../code/figures/model_ours/final_mae_comparison.png` | 全模型整體 MAE 比較 |
-| `../code/figures/model_ours/final_tier_comparison.png` | 全模型分層 MAE 比較 |
-| `../code/figures/model_ours/rnn/rnn_vs_all_mae.png` | LSTM vs 其他模型 MAE |
-| `../code/figures/walkforward/eval_elasticnet_walkforward.png` | Walk-Forward 逐 fold MAE |
-| `../code/figures/model_rf/rf_3yr_actual_vs_pred.png` | RF 3yr 預測散點圖 |
-| `../code/figures/model_rf/rf_3yr_perm_importance.png` | RF 3yr 特徵重要性 |
-| `../code/figures/model_rf/rf_3yr_error_by_tier.png` | RF 3yr 分層誤差圖 |
+| `results/figures/model_others/train_year_comparison.png` | 訓練年數比較圖 |
+| `results/figures/model_others/eval_models_mae_test.png` | 特徵族群 × 模型 MAE 比較（圖 15） |
+| `results/figures/model_others/eval_en3yr_coef.png` | ElasticNet 係數圖 |
+| `results/figures/model_others/eval_en3yr_error_by_tier.png` | 分層誤差圖 |
+| `results/figures/model_others/final_mae_comparison.png` | 全模型整體 MAE 比較 |
+| `results/figures/model_others/final_tier_comparison.png` | 全模型分層 MAE 比較 |
+| `results/figures/model_others/rnn/rnn_vs_all_mae.png` | LSTM vs 其他模型 MAE |
+| `results/figures/walkforward/eval_elasticnet_walkforward.png` | Walk-Forward 逐 fold MAE |
+| `results/figures/model_rf/rf_3yr_actual_vs_pred.png` | RF 3yr 預測散點圖 |
+| `results/figures/model_rf/rf_3yr_perm_importance.png` | RF 3yr 特徵重要性 |
+| `results/figures/model_rf/rf_3yr_error_by_tier.png` | RF 3yr 分層誤差圖 |
