@@ -103,20 +103,20 @@ finalproject-group-4/
 ### batter_value
 
 | 組員 | 系級 | 學號 | 工作分配 |
-|------|------|------|-------|
-| 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
-| 彭珮蓉 | 資計碩一 | 114753210 | 訓練資料比較（2yr vs 3yr）、特徵哲學比較（過程指標 vs wRC+ 軌跡）、ElasticNet / LSTM 建模、多模型系統比較、極端球員加權改善 |
+|------|------|------|----------|
+| 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA<br>Random Forest wRC+ 預測、Statcast 熱區視覺化 |
+| 彭珮蓉 | 資碩計一 | 114753210 | 訓練資料比較(2y vs. 3y)、特徵選取比較、ElasticNet/LSTM <br>建模及模型比較、極端球員加權改善 |
 
 ### Batted_Ball_Prediction
 
 | 組員 | 系級 | 學號 | 工作分配 |
 |------|------|------|----------|
-| — | — | — | — |
-| — | — | — | — |
+| 何嘉柚 | 資訊四 | 111703010 | XGBoost模型訓練、簡報製作、README撰寫 |
+| 莊鈞程 | 資訊四 | 111703058 | Null models, RandomForest 模型訓、資料清洗、主題發想 |
 
 ### Batter_type_clustering
 
 | 組員 | 系級 | 學號 | 工作分配 |
 |------|------|------|----------|
 | 謝螢嘉 | 廣告四 | 111405040 | 清洗資料、模型評估、模型應用發想、Presentation |
-| — | — | — | — |
+| 葛洪亮| 資碩工一 | 114753136 | 資料分群、demo實作、程式整合|
