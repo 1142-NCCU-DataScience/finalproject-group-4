@@ -124,6 +124,28 @@ https://datasciencebasebballdataanalysis-wywvlrnqe73p8mvopkqcul.streamlit.app
 
 相似球員推薦則在**同一分群、同一年度**內，以標準化後的歐氏距離計算相似度。
 
+## 選定 K 值的方法
+
+以 Elbow Method（組內平方和，WCSS）與 Silhouette Score 共同評估 K=2–10 的分群效果。
+
+| Elbow Method | Silhouette Score |
+|----|------|
+| ![Elbow Method](results/elbow%20method.png) | ![Silhouette Score](results/sihouette%20score.png) |
+| inertia 數值越小代表群內密集程度越高 | 輪廓分數衡量「群內的凝聚度」與「群間的分離度」，數值越大代表分群效果越好 |
+
+綜合 Elbow Method 與 Silhouette Score 權衡取 k=4，分作4群。
+
+## 分群穩定度驗證
+
+PCA 降維後視覺化發現各群分布較為密集、邊界不明顯，因此以 **Bootstrap（100 次有放回重抽樣）** 進一步驗證分群穩定度。
+
+每次迭代對重抽樣資料重新執行 KMeans，並以 **Adjusted Rand Index（ARI）** 量化新分群與原始分群的一致性（ARI 越接近 1 代表越穩定）。
+
+| 圖 | 說明 |
+|----|------|
+| ![PCA Visualization](results/pca_visualization.png) | PCA 二維投影，顏色代表分群結果；各群分布密集，邊界有重疊 |
+| ![Cluster Stability](results/cluster_stability_analysis.png) | 100 次 Bootstrap 的 ARI 逐次結果（青色）與平均 ARI（紅色虛線） |
+
 ## 主要依賴
 
 | 套件 | 用途 |
