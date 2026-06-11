@@ -100,11 +100,11 @@ finalproject-group-4/
 
 ## Contributors
 
-子專案 | 組員 | 系級 | 學號 | 工作分配 |
-|------|------|------|------|----------|
-|batter_value | 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
-|batter_value | 彭珮蓉 | 資計碩一 | 114753210 | 訓練資料比較（2yr vs 3yr）、特徵哲學比較（過程指標 vs wRC+ 軌跡）、ElasticNet / LSTM 建模、多模型系統比較、極端球員加權改善 |
-Batted_Ball_Prediction |
-Batted_Ball_Prediction |
-Batter_type_clustering | 謝螢嘉 | 廣告四 | 111405040 | 清洗資料、模型評估、模型應用發想、Presentation |
-Batter_type_clustering | 
+| 子專案 | 組員 | 系級 | 學號 | 工作分配 |
+|--------|------|------|------|----------|
+| batter_value | 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
+| batter_value | 彭珮蓉 | 資計碩一 | 114753210 | 訓練資料比較（2yr vs 3yr）、特徵哲學比較（過程指標 vs wRC+ 軌跡）、ElasticNet / LSTM 建模、多模型系統比較、極端球員加權改善 |
+| Batted_Ball_Prediction | — | — | — | — |
+| Batted_Ball_Prediction | — | — | — | — |
+| Batter_type_clustering | 謝螢嘉 | 廣告四 | 111405040 | 清洗資料、模型評估、模型應用發想、Presentation |
+| Batter_type_clustering | — | — | — | — |
