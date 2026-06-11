@@ -104,8 +104,8 @@ finalproject-group-4/
 
 | 組員 | 系級 | 學號 | 工作分配 |
 |------|------|------|----------|
-| 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA、Random Forest wRC+ 預測、Statcast 熱區視覺化 |
-| 彭珮蓉 | 資碩計一 | 114753210 | 訓練資料比較(2y vs. 3y)、特徵選取比較、ElasticNet/LSTM 建模及模型比較、極端球員加權改善 |
+| 吳帛恩 | 統計三 | 112207433 | Statcast 資料 pipeline、EDA<br>Random Forest wRC+ 預測、Statcast 熱區視覺化 |
+| 彭珮蓉 | 資碩計一 | 114753210 | 訓練資料比較(2y vs. 3y)、特徵選取比較、ElasticNet/LSTM <br>建模及模型比較、極端球員加權改善 |
 
 ### Batted_Ball_Prediction
 
