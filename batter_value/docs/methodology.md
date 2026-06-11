@@ -104,7 +104,7 @@
 
 ### 5.1 `results/figures/projection_rf_perm_importance.png`
 
-![RF Permutation Importance](results/figures/projection_rf_perm_importance.png)
+![RF Permutation Importance](../results/figures/projection_rf_perm_importance.png)
 
 - **內容：** Random Forest 在 **validation（target_season = 2023）** 上之 **permutation importance**（通常顯示前若干名特徵）。
 - **解讀：** 橫條越長 → 打亂該特徵後誤差上升越多 → 模型越依賴該輸入。常見重要項含 **K%、BABIP、PA、年齡** 等。若 **`primary_pos`** 多為 **UNK**，位置 one-hot 貢獻可能偏低。
@@ -112,7 +112,7 @@
 
 ### 5.2 `results/figures/projection_rf_actual_vs_pred_2024.png`
 
-![RF 實際 vs 預測 2024](results/figures/projection_rf_actual_vs_pred_2024.png)
+![RF 實際 vs 預測 2024](../results/figures/projection_rf_actual_vs_pred_2024.png)
 
 - **內容：** **Test**（**target_season = 2024**）：橫軸 **實際 wRC+**，縱軸 **預測 wRC+**；對角線為完美預測。
 - **解讀：** 點愈靠近對角線愈準；整體偏移表示系統性高估或低估。若圖上標註 **MAE**，為 2024 測試集之平均絕對誤差。

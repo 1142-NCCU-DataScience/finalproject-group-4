@@ -103,7 +103,7 @@ for last, first in players:
 > `results/figures/poster/fig_pipeline.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![資料管線流程圖](results/figures/poster/fig_pipeline.png)
+![資料管線流程圖](../results/figures/poster/fig_pipeline.png)
 
 *圖 1：從 Statcast 逐球資料到最終 wRC+ 預測的完整資料管線。每個方塊代表一個處理階段，箭頭表示資料流向。*
 
@@ -153,7 +153,7 @@ for last, first in players:
 > `results/figures/poster/fig_timesplit.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![時間切分策略](results/figures/poster/fig_timesplit.png)
+![時間切分策略](../results/figures/poster/fig_timesplit.png)
 
 *圖 2：依 target_season 進行時間切分。藍色氣泡為 Train（2021–22，n=453），綠色為 Validation（2023，n=234），紅色為 Test（2024，n=256）。箭頭示意預測 2024 時所需的三年 lag 資料範圍。此切分方式確保模型在訓練時看不到未來資料。*
 
@@ -167,7 +167,7 @@ for last, first in players:
 > `results/figures/eda_distributions.png`  
 > 📑 **期末簡報用**
 
-![主要打擊指標分布](results/figures/eda_distributions.png)
+![主要打擊指標分布](../results/figures/eda_distributions.png)
 
 *圖 3：2018–2024 MLB 合格打者（PA ≥ 150）六項主要指標的分布。wRC+ 接近常態分布，中心約 90；WAR 右偏明顯，多數球員貢獻有限，少數明星遠超群倫；K% 呈右偏，三振率逐年上升是現代棒球趨勢。*
 
@@ -182,7 +182,7 @@ for last, first in players:
 > `results/figures/eda_correlation.png`  
 > 📑 **期末簡報用**
 
-![打擊指標相關係數熱圖](results/figures/eda_correlation.png)
+![打擊指標相關係數熱圖](../results/figures/eda_correlation.png)
 
 *圖 4：九項核心打擊指標的 Pearson 相關係數矩陣。顏色越深紅代表正相關越強，藍色代表負相關。*
 
@@ -205,7 +205,7 @@ for last, first in players:
 > `results/figures/fig1_wrcplus_ranking.png`  
 > 📑 **期末簡報用**
 
-![wRC+ 排名](results/figures/fig1_wrcplus_ranking.png)
+![wRC+ 排名](../results/figures/fig1_wrcplus_ranking.png)
 
 *圖 5：2018–2024 所有合格球季中 wRC+ 最高的 20 名打者。顏色代表 K-Means 分群結果（強打型、選球型、接觸型、工具型）。虛線為聯盟平均（100）。*
 
@@ -217,7 +217,7 @@ for last, first in players:
 > `results/figures/fig2_war_vs_wrcplus.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![WAR vs wRC+ 四象限](results/figures/fig2_war_vs_wrcplus.png)
+![WAR vs wRC+ 四象限](../results/figures/fig2_war_vs_wrcplus.png)
 
 *圖 6：打者 WAR 對 wRC+ 的分布。虛線為各指標平均值，形成四象限。右上為「明星球員」（高攻擊力+高整體價值），右下為「攻擊潛力型」（高 wRC+ 但 WAR 偏低，可能守備較弱），左上為「守備價值型」（整體貢獻高但攻擊偏弱），左下為「替補水準」。*
 
@@ -233,7 +233,7 @@ for last, first in players:
 > `results/figures/fig4_heatmap_all.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![三球員熱區圖](results/figures/fig4_heatmap_all.png)
+![三球員熱區圖](../results/figures/fig4_heatmap_all.png)
 
 *圖 7：Aaron Judge、Mookie Betts、Ronald Acuña Jr. 在 2024 球季所有打席的進壘點密度分布（Hexbin 圖）。黑框為好球帶（MLB 標準：水平 ±0.83 ft，垂直 1.5–3.5 ft）。顏色越深紅代表密度越高。*
 
@@ -248,7 +248,7 @@ for last, first in players:
 > `results/figures/fig5_heatmap_by_result.png`  
 > 📑 **期末簡報用**
 
-![打擊結果分色](results/figures/fig5_heatmap_by_result.png)
+![打擊結果分色](../results/figures/fig5_heatmap_by_result.png)
 
 *圖 8：Aaron Judge、Mookie Betts、Ronald Acuña 三人合計的進壘點，依打擊結果分色。全壘打（紅星）集中於好球帶中間偏下，三振（紅 ×）分布較廣，四壞球（橘菱形）多在好球帶外。*
 
@@ -260,7 +260,7 @@ for last, first in players:
 > `results/figures/fig10_judge_power_vs_weak.png`  
 > 📑 **期末簡報用**
 
-![Judge 強弱區](results/figures/fig10_judge_power_vs_weak.png)
+![Judge 強弱區](../results/figures/fig10_judge_power_vs_weak.png)
 
 *圖 9：Aaron Judge 在 2024 球季的強區（長打：HR+2B+3B，n=94）與弱區（三振：K，n=164）進壘點熱區。左圖顯示 Judge 在好球帶中央集中爆發長打；右圖顯示三振主要集中在好球帶右側（對右打者為外角）。*
 
@@ -272,7 +272,7 @@ for last, first in players:
 > `results/figures/fig9_xba_vs_ba.png`  
 > 📑 **期末簡報用（補充分析）**
 
-![xBA vs BA](results/figures/fig9_xba_vs_ba.png)
+![xBA vs BA](../results/figures/fig9_xba_vs_ba.png)
 
 *圖 10：2024 球季（至少 50 次擊球）打者的實際打擊率（BA）對期望打擊率（xBA，Statcast 物理模型預測）。位於對角線上方的球員打得比「應有水準」好（可能受益於防守失誤或強勁速度）；下方球員則「運氣較差」或受強守備影響。顏色代表 BA−xBA 差值。*
 
@@ -299,7 +299,7 @@ for last, first in players:
 > `results/figures/poster/fig_radar_stars.png`  
 > 📑 **期末簡報用（補充）**
 
-![明星雷達圖](results/figures/poster/fig_radar_stars.png)
+![明星雷達圖](../results/figures/poster/fig_radar_stars.png)
 
 *圖 11：Aaron Judge、Juan Soto、Shohei Ohtani、Mookie Betts、Freddie Freeman 在六項打擊指標的標準化能力圖（各指標以 2018–2024 全體球員最大值為基準，取各球員生涯各季最優值）。*
 
@@ -338,7 +338,7 @@ for last, first in players:
 > `results/figures/poster/fig_perm_importance.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![特徵重要性](results/figures/poster/fig_perm_importance.png)
+![特徵重要性](../results/figures/poster/fig_perm_importance.png)
 
 *圖 12：Random Forest 在 Validation（2023）上的 Permutation Importance。橫軸為「打亂該特徵後驗證誤差上升量」，越長代表模型越依賴該特徵。紅色為關鍵特徵（Top 30%）。*
 
@@ -358,7 +358,7 @@ for last, first in players:
 > `results/figures/poster/fig_actual_vs_pred.png`  
 > 🏆 **海報重點圖** ｜ 📑 **期末簡報必放**
 
-![實際 vs 預測](results/figures/poster/fig_actual_vs_pred.png)
+![實際 vs 預測](../results/figures/poster/fig_actual_vs_pred.png)
 
 *圖 13：2024 球季 Hold-out Test（n=241，已過濾 wRC+<20 的算法異常值）的實際 wRC+ 對 RF 預測值散點圖。虛線為完美預測線（y=x）。顏色代表預測誤差大小（紅色誤差大，綠色誤差小）。Juan Soto 和 Shohei Ohtani 的真實 wRC+ 高達 150+，模型低估了這類超級球星。*
 
@@ -399,7 +399,7 @@ for last, first in players:
 > 📊 **圖 14 — 訓練年數比較**  
 > `results/figures/model_others/train_year_comparison.png`
 
-![訓練年數比較](results/figures/model_others/train_year_comparison.png)
+![訓練年數比較](../results/figures/model_others/train_year_comparison.png)
 
 *圖 14：以相同模型（RF 與 ElasticNet）、相同 Test 2024 Hold-out，比較 Train 2yr（2021–22，453 筆）與 Train 3yr（2021–23，687 筆）的 MAE 差異（左圖）及改善幅度（右圖）。*
 
@@ -419,7 +419,7 @@ for last, first in players:
 > 📊 **圖 15 — 特徵族群 × 模型的 MAE 比較**  
 > `results/figures/model_others/eval_models_mae_test.png`
 
-![特徵族群 MAE 比較](results/figures/model_others/eval_models_mae_test.png)
+![特徵族群 MAE 比較](../results/figures/model_others/eval_models_mae_test.png)
 
 **設計：** 固定訓練切分（Train 2021–22，Test 2024），用相同資料跑多個模型，分為三種特徵族群：
 
@@ -458,7 +458,7 @@ for last, first in players:
 > 📊 **圖 16 — ElasticNet 學習到的特徵係數**  
 > `results/figures/model_others/eval_en3yr_coef.png`
 
-![ElasticNet 係數](results/figures/model_others/eval_en3yr_coef.png)
+![ElasticNet 係數](../results/figures/model_others/eval_en3yr_coef.png)
 
 *圖 16：ElasticNet（wRC+ 軌跡，Train 2021+22+23 → Test 2024）的特徵係數。正值（青色）代表正相關，負值（紅色）代表負相關。*
 
@@ -475,7 +475,7 @@ for last, first in players:
 > 📊 **圖 17 — 各模型整體 MAE 與分層 MAE**  
 > `results/figures/model_others/rnn/rnn_vs_all_mae.png`
 
-![全模型比較](results/figures/model_others/rnn/rnn_vs_all_mae.png)
+![全模型比較](../results/figures/model_others/rnn/rnn_vs_all_mae.png)
 
 *圖 17（左）：Null / RF 2yr / RF 3yr / ElasticNet+加權 / LSTM 五個模型的 Test 2024 整體 MAE。（右）：同五個模型在弱打者（<80）、中下（80–100）、中上（100–130）、明星（130+）四個等級的 MAE 比較。*
 
@@ -504,7 +504,7 @@ for last, first in players:
 > 📊 **圖 18 — ElasticNet 分層誤差與系統性偏差**  
 > `results/figures/model_others/eval_en3yr_error_by_tier.png`
 
-![分層誤差](results/figures/model_others/eval_en3yr_error_by_tier.png)
+![分層誤差](../results/figures/model_others/eval_en3yr_error_by_tier.png)
 
 *圖 18（左）：ElasticNet（3yr）在四個 wRC+ 等級的 MAE。（右）：各等級實際 wRC+ 平均值（青色）vs 預測平均值（紅色），虛線為聯盟平均（100）。*
 
@@ -536,7 +536,7 @@ for last, first in players:
 > 📊 **圖 19 — 三模型分層 MAE 比較**  
 > `results/figures/model_others/final_tier_comparison.png`
 
-![三模型分層比較](results/figures/model_others/final_tier_comparison.png)
+![三模型分層比較](../results/figures/model_others/final_tier_comparison.png)
 
 *圖 19（左）：RF 3yr / ElasticNet Baseline / ElasticNet+3×加權在四個等級的 MAE 比較。（右）：三個模型的系統性偏差折線圖，黑線為實際 wRC+ 均值。*
 
@@ -557,7 +557,7 @@ for last, first in players:
 > 📊 **圖 20 — Walk-Forward 逐 fold MAE**  
 > `results/figures/walkforward/eval_elasticnet_walkforward.png`
 
-![Walk-Forward](results/figures/walkforward/eval_elasticnet_walkforward.png)
+![Walk-Forward](../results/figures/walkforward/eval_elasticnet_walkforward.png)
 
 *圖 20：ElasticNet（wRC+ 軌跡）在 Walk-Forward 驗證下，各 fold 的 Test MAE。X 軸為測試球季，Y 軸為 MAE，括號內為該 fold 的訓練樣本數。*
 
